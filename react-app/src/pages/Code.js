@@ -18,13 +18,15 @@ const Code = () => {
 
   useEffect(() => {
     if (decode) {
-      setData({ ...data, decode, encode: "" });
+      // setData({ ...data, decode, encode: "" });
+      setData(data => ({ ...data, decode, encode: "" }));
     }
   }, [decode, setData]);
 
   useEffect(() => {
     if (encode) {
-      setData({ ...data, encode, decode: "" });
+      // setData({ ...data, encode, decode: "" });
+      setData(data => ({ ...data, encode, decode: "" }));
     }
   }, [encode, setData]);
 
